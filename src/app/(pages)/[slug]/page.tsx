@@ -14,6 +14,7 @@ import { generateMeta } from '../../_utilities/generateMeta'
 
 import classes from './index.module.scss'
 import Categories from '../../_components/Categories'
+import Promotion from '../../_components/Promotion'
 
 // Payload Cloud caches all files through Cloudflare, so we don't need Next.js to cache them as well
 // This means that we can turn off Next.js data caching and instead rely solely on the Cloudflare CDN
@@ -62,7 +63,8 @@ export default async function Page({ params: { slug = 'home' } }) {
         <section>
           <Hero {...hero} />
           <Gutter className={classes.home}>
-            <Categories categories = {categories} />
+            <Categories categories={categories} />
+            <Promotion />
           </Gutter>
         </section>
       ) : (
