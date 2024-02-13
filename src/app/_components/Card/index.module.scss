@@ -70,11 +70,18 @@
 }
 
 .mediaWrapper {
+  border-radius: 15px;
   text-decoration: none;
   display: block;
   position: relative;
   min-height: 262px;
   background-color: var(--color-dark-50);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  :hover {
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: .3s ease-in-out; /* Set transition for box-shadow */
+  }
 }
 
 .image {
